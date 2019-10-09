@@ -1,0 +1,17 @@
+@using Packer.Models;
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css" />
+
+<div class="index">
+<h1>Pack List</h1>
+<ul>
+    @foreach (PackList item in Model)
+    {
+      <li>@item.Item</li>
+      <li>@item.IsPurchased</li>
+      
+    }
+  </ul>
+  
+  <li><a href="/packer/new">Add a new entry.</a></li>
+</div>
